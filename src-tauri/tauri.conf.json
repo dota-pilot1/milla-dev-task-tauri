@@ -1,0 +1,56 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicgirault/tauri-v2-schema/main/schema.json",
+  "productName": "Milla Dev Task",
+  "version": "0.1.10",
+  "identifier": "com.milla-pilot.devtask",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1424",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app", "dmg", "nsis"],
+    "createUpdaterArtifacts": true,
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEM2QjY5RDdENjRCRjI2Q0QKUldUTkpyOWtmWjIyeHZvTEsySFZGMUU4Z2MyVC9MOTZTdno5T2dwbVA3WmZtZHBWSG5XL2FicDkK",
+      "endpoints": [
+        "https://github.com/dota-pilot1/milla-dev-task-tauri/releases/latest/download/latest.json"
+      ]
+    }
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Milla Dev Task",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 1000,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "trafficLightPosition": {
+          "x": -100,
+          "y": 0
+        },
+        "dragDropEnabled": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  }
+}
