@@ -307,7 +307,7 @@ function WorkspaceHome({
 
   return (
     <div className="min-w-0 flex-1 overflow-y-auto bg-slate-50">
-      <div className="mx-auto w-full max-w-3xl px-8 py-7">
+      <div className="mx-auto w-full max-w-6xl px-8 py-7">
         <div className="mb-4 flex items-start justify-between gap-3">
           <div>
             <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
@@ -386,7 +386,7 @@ function WorkspaceHome({
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,320px))] justify-center gap-3">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
             {teams.map((team) => (
               <div
                 key={team.id}

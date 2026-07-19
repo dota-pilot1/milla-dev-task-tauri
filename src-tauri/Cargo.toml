@@ -1,6 +1,6 @@
 [package]
 name = "milla-dev-task-tauri"
-version = "0.1.10"
+version = "0.1.11"
 description = "밀라(milla-pilot) 개발 업무 전용 앱"
 authors = ["you"]
 edition = "2021"
